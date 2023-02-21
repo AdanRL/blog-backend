@@ -1,0 +1,37 @@
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "description": "API Rest con NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.ts",
+    "dev": "nodemon server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AdanRL/blog-backend.git"
+  },
+  "keywords": [
+    "API",
+    "Practice",
+    "MongoDB",
+    "NodeJS"
+  ],
+  "author": "Adán de la Rosa Lugo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdanRL/blog-backend/issues"
+  },
+  "homepage": "https://github.com/AdanRL/blog-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.2",
+    "multer": "^1.4.5-lts.1",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
