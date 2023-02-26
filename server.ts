@@ -1,7 +1,9 @@
 import { db } from './database/db';
 import express, { Express, Request, Response} from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
+dotenv.config();
 // Llamada a la función db
 db()
   .then(() => {
@@ -12,7 +14,7 @@ db()
   });
 
 // Configuración de servidor
-const port = 3900;
+const port: number = parseInt(process.env.PORT);
 const app: Express = express();
 app.use(cors());
 
