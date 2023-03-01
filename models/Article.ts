@@ -1,6 +1,6 @@
-import mongoose, { Document, Schema } from "mongoose";
+import mongoose, { Document, Model, Schema } from "mongoose";
 
-interface ArticleModel extends Document {
+export interface ArticleModel extends Document {
 	title: string;
 	content: string;
 	date: Date;
@@ -12,9 +12,9 @@ const  ArticleSchema: Schema = new Schema({
 	title: { type: String, required: true, unique: true },
 	content: { type: String, required: true },
 	date: {type: Date, default: Date.now },
-	image: {type: String, default: "default.png" }
+	image: {type: String }
 })
 
-const Article = mongoose.model<ArticleModel>("Article", ArticleSchema);
+export const Article: Model<ArticleModel> = mongoose.model<ArticleModel>("Article", ArticleSchema);
 
-export default Article
+
