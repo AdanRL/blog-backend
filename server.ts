@@ -4,7 +4,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import routerArticle from './routes/article'
-import routerArticle2 from './routes/article'
 dotenv.config();
 // Llamada a la función db
 // db()
@@ -22,10 +21,9 @@ app.use(cors());
 
 //Convertir body a objeto js
 app.use(express.json());
-
+app.use(express.urlencoded({extended: true}));
 // Rutas
-app.use('/', routerArticle)
-app.use('/test', routerArticle2)
+app.use('/api', routerArticle)
 // Escuchar peticiones http
 try {
 	app.listen(port, () => {

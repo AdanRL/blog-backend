@@ -4,7 +4,7 @@ export interface ArticleModel extends Document {
 	title: string;
 	content: string;
 	date: Date;
-	image: string;
+	image?: string;
 
 }
 
